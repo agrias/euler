@@ -17,4 +17,4 @@ val mod3and5: (Int, Int) => Boolean = mod3(_)||mod5(_)
 //playing with predicates
 stream.takeWhile(_ < 10).filter(num => num%3==0||num%5==0).reduce(_+_)
 stream.takeWhile(_ < 10).filter(num => mod3(num)||mod5(num)).reduce(_+_)
-stream.takeWhile(_ < 10).filter(num => mod3and5(num, num)).reduce(_+_)
+stream.takeWhile(_ < 1000).filter(num => mod3and5(num, num)).reduce(_+_)
