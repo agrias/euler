@@ -1,11 +1,12 @@
-val num = 20
-val primes = Stream.from(1).takeWhile(_ <= num).filter(isPrime(_)).map(same => {
-  println(same)
-  same
-}).reduce((a, b) => {a*b})
+Methods.time {
+  val num = 20
 
-//has to be a multiple of the product of the primes, idk if this is true for everything
-Stream.from(1).find((a) => divisibleByAll(a*primes, num)).get*primes
+  val primes = Stream.from(1).takeWhile(_ <= num).filter(isPrime(_))
+    .reduce((a, b) => a*b)
+
+  //has to be a multiple of the product of the primes, idk if this is true for everything
+  Stream.from(1).find((a) => divisibleByAll(a * primes, num)).get * primes
+}
 
 Stream.from(1).takeWhile(_ <= 10).filter(!isPrime(_)
 ).map(a => smallestPrimeFactor(a)).print()
