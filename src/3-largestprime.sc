@@ -4,9 +4,10 @@ isPrime(3)
 isPrime(4)
 isPrime(100)
 
-largestPrimeFactor(100)
-largestPrimeFactor(13195)
-largestPrimeFactor(600851475143L)
+Methods.time{largestPrimeFactor(100)}
+Methods.time{largestPrimeFactor(13195)}
+Methods.time{largestPrimeFactor(600851475143L)}
+largestPrimeFactor(3628800)
 //isPrime(600851475143)
 
 def largestPrimeFactor (number: Double) : Double = {
