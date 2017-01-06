@@ -11,6 +11,17 @@ object Methods {
     result
   }
 
+  def isPrime (number: Double) : Boolean = {
+    val squareroot = Math.sqrt(number)
+    Stream.from(2).takeWhile(_ <= squareroot)
+      .filter(number%_==0)
+      .map((a: Int) => {
+        //println(a)
+        return false
+      })
+    return true
+  }
+
   def foo() {
     println("Hello World!")
   }
